@@ -29,8 +29,9 @@
 
     <h2>Why it asks for Google permissions</h2>
     <ul>
-      <li><b>Gmail — send only</b> (<code>gmail.send</code>): to send booking-related emails to guests (contract, payment reminders, thank-you notes). Every message is shown to the developer and must be confirmed before it is sent. The application cannot read, list, modify or delete any email.</li>
+      <li><b>Gmail — send only</b> (<code>gmail.send</code>): to send booking-related emails to guests (contract, payment reminders, thank-you notes). Every message is shown to the developer and must be confirmed before it is sent. This permission alone does not allow the application to read any email.</li>
       <li><b>Google Sheets</b> (<code>spreadsheets</code>): to add or update rows in <b>one specific spreadsheet</b> — the arrivals list shared with the property's concierge service. Every change is previewed and must be confirmed before it is written. The application never reads or modifies any other spreadsheet.</li>
+      <li><b>Gmail — read only</b> (<code>gmail.readonly</code>): used only when the developer clicks the “Update” button. The application then looks for booking and payout emails sent by the rental platforms (Airbnb, Booking.com, Abritel) and for emails exchanged with the email address of a guest of a direct booking, and extracts the information needed to update the developer’s booking records (guest name, dates, amounts). With this permission it never modifies, moves, deletes or sends anything, and it does not keep the text of the messages.</li>
     </ul>
     <p>Details on how information is handled: <a href="privacy.html">Privacy policy</a>.</p>
   </section>
@@ -42,8 +43,9 @@
 
     <h2>Pourquoi elle demande des autorisations Google</h2>
     <ul>
-      <li><b>Gmail — envoi uniquement</b> (<code>gmail.send</code>) : pour envoyer aux locataires des e-mails liés aux réservations (contrat, rappels de paiement, remerciements). Chaque message est présenté au développeur et doit être confirmé avant l'envoi. L'application ne peut ni lire, ni lister, ni modifier, ni supprimer aucun e-mail.</li>
+      <li><b>Gmail — envoi uniquement</b> (<code>gmail.send</code>) : pour envoyer aux locataires des e-mails liés aux réservations (contrat, rappels de paiement, remerciements). Chaque message est présenté au développeur et doit être confirmé avant l'envoi. Ce droit seul ne permet pas à l'application de lire des e-mails.</li>
       <li><b>Google Sheets</b> (<code>spreadsheets</code>) : pour ajouter ou mettre à jour des lignes dans <b>une seule feuille</b> — la liste des arrivées partagée avec la conciergerie du bien. Chaque modification est prévisualisée et doit être confirmée avant d'être écrite. L'application ne lit ni ne modifie aucune autre feuille.</li>
+      <li><b>Gmail — lecture seule</b> (<code>gmail.readonly</code>) : utilisé uniquement lorsque le développeur clique sur le bouton « Mise à jour ». L'application cherche alors les e-mails de réservation et de versement envoyés par les plateformes de location (Airbnb, Booking.com, Abritel) et les e-mails échangés avec l'adresse d'un locataire en réservation directe, et en extrait les informations nécessaires pour mettre à jour les réservations du développeur (nom, dates, montants). Avec ce droit, elle ne modifie, ne déplace, ne supprime et n'envoie rien, et ne conserve pas le texte des messages.</li>
     </ul>
     <p>Détails sur le traitement des informations : <a href="privacy.html#fr">Politique de confidentialité</a>.</p>
   </section>

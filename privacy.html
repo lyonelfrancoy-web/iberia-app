@@ -28,33 +28,33 @@
 
     <h2>2. Information the application accesses</h2>
     <ul>
-      <li><b>Google account authorization</b>: an OAuth token that lets the application (a) send emails through Gmail (<code>gmail.send</code> scope — send only) and (b) edit one specific Google Sheets spreadsheet (<code>spreadsheets</code> scope).</li>
+      <li><b>Google account authorization</b>: an OAuth token that lets the application (a) send emails through Gmail (<code>gmail.send</code> scope — send only), (b) read emails in read-only mode (<code>gmail.readonly</code> scope), and (c) edit one specific Google Sheets spreadsheet (<code>spreadsheets</code> scope). The developer grants each permission separately and can revoke it at any time.</li>
       <li><b>Guest and booking information</b> that the developer himself enters (names, contact details, stay dates, amounts). This information comes from the developer, not from Google.</li>
       <li><b>Contents of the one spreadsheet</b> (the arrivals list shared with the concierge service), read only to locate the right row before adding or updating it.</li>
     </ul>
-    <p>The application does <b>not</b> read, list, search, modify or delete emails, and does not access any other Google service or any other spreadsheet.</p>
+    <p>The application <b>never modifies, moves or deletes</b> emails. It reads emails <b>only when the developer clicks the “Update” button</b>, and only (i) emails from rental platforms (Airbnb, Booking.com, Abritel) whose subject concerns a booking or a payout, and (ii) emails exchanged with the email address of a guest of a direct booking. It does not access any other Google service or any other spreadsheet.</p>
 
     <h2>3. How the information is used</h2>
-    <p>Solely to provide the features described above, at the developer's explicit request: sending an email after the developer has reviewed and confirmed it, and writing a row to the arrivals spreadsheet after the developer has reviewed and confirmed a preview.</p>
+    <p>Solely to provide the features described above, at the developer's explicit request: sending an email after the developer has reviewed and confirmed it, writing a row to the arrivals spreadsheet after the developer has reviewed and confirmed a preview, and — on request — extracting booking information (guest name, dates, amounts, reservation codes) from the emails described above in order to propose updates to the developer’s booking records, which the developer reviews and confirms one by one.</p>
 
     <h2>4. Where the information is stored</h2>
     <ul>
       <li>The OAuth token and client credentials are stored <b>only on the developer's own computer</b>, in his user profile folder.</li>
-      <li>Booking data is stored in a file on the developer's own computer, in a folder synchronized by his own Google Drive account.</li>
+      <li>Booking data is stored in a file on the developer's own computer, in a folder synchronized by his own Google Drive account. Information extracted from emails (names, dates, amounts, reservation codes, shortened subject lines) is stored there; <b>the text of the messages is not kept</b>.</li>
       <li>The developer operates <b>no server and no database</b>. The application sends requests only to Google APIs (Gmail, Google Sheets) and to the calendar-feed addresses (iCal) that the developer himself configures. There is no analytics, advertising or tracking.</li>
     </ul>
 
     <h2>5. Sharing</h2>
-    <p>Information is <b>not shared, sold or transferred</b> to anyone, and is not used for advertising, profiling or for training any artificial-intelligence or machine-learning model. Emails sent through the application go to the recipient chosen by the developer; the spreadsheet is shared with the concierge service by the developer himself, independently of this application.</p>
+    <p>Information is <b>not shared, sold or transferred</b> to anyone, and is not used for advertising, profiling or for training any artificial-intelligence or machine-learning model. Email content is read by the application on the developer's computer only; no human other than the developer reads it. Emails sent through the application go to the recipient chosen by the developer; the spreadsheet is shared with the concierge service by the developer himself, independently of this application.</p>
 
     <h2>6. Google API Services User Data Policy</h2>
-    <p>The application's use and transfer to any other app of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    <p>The application's use and transfer to any other app of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. In particular, information obtained through the Gmail permissions is used only to provide the user-facing features described on this page, is not transferred to others except as needed to provide those features, to comply with the law or for security purposes, is not used for advertising, and is not read by humans other than the developer.</p>
 
     <h2>7. Retention and deletion</h2>
     <p>The developer can revoke the application's access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, and delete the stored token by removing the application's credentials folder on his computer. Revoking access immediately prevents any further use of Gmail or Google Sheets by the application.</p>
 
     <h2>8. Security</h2>
-    <p>The application only listens on the computer it runs on (it is not reachable from the network), requires an explicit confirmation before any email is sent or any spreadsheet row is written, and requests only the permissions listed above.</p>
+    <p>The application only listens on the computer it runs on (it is not reachable from the network), requires an explicit confirmation before any email is sent, any spreadsheet row is written, or any booking record is changed on the basis of email content, and requests only the permissions listed above.</p>
 
     <h2>9. Children</h2>
     <p>The application is not directed at children and collects no information from them.</p>
@@ -69,33 +69,33 @@
 
     <h2>2. Informations auxquelles l'application accède</h2>
     <ul>
-      <li><b>Autorisation du compte Google</b> : un jeton OAuth qui permet à l'application (a) d'envoyer des e-mails via Gmail (droit <code>gmail.send</code> — envoi uniquement) et (b) de modifier une feuille Google Sheets précise (droit <code>spreadsheets</code>).</li>
+      <li><b>Autorisation du compte Google</b> : un jeton OAuth qui permet à l'application (a) d'envoyer des e-mails via Gmail (droit <code>gmail.send</code> — envoi uniquement), (b) de lire des e-mails en lecture seule (droit <code>gmail.readonly</code>) et (c) de modifier une feuille Google Sheets précise (droit <code>spreadsheets</code>). Le développeur accorde chaque droit séparément et peut le révoquer à tout moment.</li>
       <li><b>Informations sur les locataires et les réservations</b> saisies par le développeur lui-même (noms, coordonnées, dates de séjour, montants). Ces informations viennent du développeur, pas de Google.</li>
       <li><b>Contenu de cette feuille</b> (la liste des arrivées partagée avec la conciergerie), lu uniquement pour repérer la bonne ligne avant de l'ajouter ou de la mettre à jour.</li>
     </ul>
-    <p>L'application <b>ne lit, ne liste, ne recherche, ne modifie et ne supprime aucun e-mail</b>, et n'accède à aucun autre service Google ni à aucune autre feuille.</p>
+    <p>L'application <b>ne modifie, ne déplace et ne supprime jamais</b> d'e-mail. Elle ne lit des e-mails <b>que lorsque le développeur clique sur le bouton « Mise à jour »</b>, et seulement (i) ceux des plateformes de location (Airbnb, Booking.com, Abritel) dont l'objet concerne une réservation ou un versement, et (ii) ceux échangés avec l'adresse e-mail d'un locataire en réservation directe. Elle n'accède à aucun autre service Google ni à aucune autre feuille.</p>
 
     <h2>3. Utilisation des informations</h2>
-    <p>Uniquement pour fournir les fonctions décrites ci-dessus, à la demande explicite du développeur : envoyer un e-mail après qu'il l'a relu et confirmé, et écrire une ligne dans la feuille des arrivées après qu'il a relu et confirmé un aperçu.</p>
+    <p>Uniquement pour fournir les fonctions décrites ci-dessus, à la demande explicite du développeur : envoyer un e-mail après qu'il l'a relu et confirmé, écrire une ligne dans la feuille des arrivées après qu'il a relu et confirmé un aperçu, et — sur demande — extraire des e-mails décrits ci-dessus des informations de réservation (nom du locataire, dates, montants, codes de réservation) pour proposer des mises à jour des réservations du développeur, qu'il relit et confirme une par une.</p>
 
     <h2>4. Où les informations sont conservées</h2>
     <ul>
       <li>Le jeton OAuth et les identifiants sont conservés <b>uniquement sur l'ordinateur du développeur</b>, dans son dossier utilisateur.</li>
-      <li>Les données de réservation sont conservées dans un fichier sur son ordinateur, dans un dossier synchronisé par son propre compte Google Drive.</li>
+      <li>Les données de réservation sont conservées dans un fichier sur son ordinateur, dans un dossier synchronisé par son propre compte Google Drive. Les informations extraites des e-mails (noms, dates, montants, codes de réservation, objets raccourcis) y sont enregistrées ; <b>le texte des messages n'est pas conservé</b>.</li>
       <li>Le développeur n'exploite <b>aucun serveur ni aucune base de données</b>. L'application n'envoie de requêtes qu'aux API Google (Gmail, Google Sheets) et aux adresses de calendrier (iCal) que le développeur configure lui-même. Aucune mesure d'audience, publicité ou suivi.</li>
     </ul>
 
     <h2>5. Partage</h2>
-    <p>Les informations ne sont <b>ni partagées, ni vendues, ni transférées</b>, et ne servent ni à la publicité, ni au profilage, ni à l'entraînement d'un modèle d'intelligence artificielle ou d'apprentissage automatique. Les e-mails envoyés via l'application vont au destinataire choisi par le développeur ; la feuille est partagée avec la conciergerie par le développeur lui-même, indépendamment de cette application.</p>
+    <p>Les informations ne sont <b>ni partagées, ni vendues, ni transférées</b>, et ne servent ni à la publicité, ni au profilage, ni à l'entraînement d'un modèle d'intelligence artificielle ou d'apprentissage automatique. Le contenu des e-mails n'est lu que par l'application, sur l'ordinateur du développeur ; aucune personne autre que le développeur ne le lit. Les e-mails envoyés via l'application vont au destinataire choisi par le développeur ; la feuille est partagée avec la conciergerie par le développeur lui-même, indépendamment de cette application.</p>
 
     <h2>6. Règles Google (Google API Services User Data Policy)</h2>
-    <p>L'utilisation et le transfert à toute autre application des informations reçues des API Google respectent la <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, y compris les exigences d'utilisation limitée (Limited Use).</p>
+    <p>L'utilisation et le transfert à toute autre application des informations reçues des API Google respectent la <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, y compris les exigences d'utilisation limitée (Limited Use). En particulier, les informations obtenues via les droits Gmail ne servent qu'aux fonctions décrites sur cette page, ne sont pas transférées à des tiers (sauf nécessité pour fournir ces fonctions, obligation légale ou sécurité), ne servent pas à la publicité et ne sont lues par aucune personne autre que le développeur.</p>
 
     <h2>7. Conservation et suppression</h2>
     <p>Le développeur peut révoquer l'accès de l'application à tout moment sur <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, et supprimer le jeton conservé en effaçant le dossier d'identifiants de l'application sur son ordinateur. La révocation empêche immédiatement toute nouvelle utilisation de Gmail ou de Google Sheets par l'application.</p>
 
     <h2>8. Sécurité</h2>
-    <p>L'application n'écoute que sur l'ordinateur où elle fonctionne (elle n'est pas joignable depuis le réseau), exige une confirmation explicite avant tout envoi d'e-mail et toute écriture dans la feuille, et ne demande que les autorisations listées ci-dessus.</p>
+    <p>L'application n'écoute que sur l'ordinateur où elle fonctionne (elle n'est pas joignable depuis le réseau), exige une confirmation explicite avant tout envoi d'e-mail, toute écriture dans la feuille et toute modification d'une réservation à partir du contenu d'un e-mail, et ne demande que les autorisations listées ci-dessus.</p>
 
     <h2>9. Enfants</h2>
     <p>L'application ne s'adresse pas aux enfants et ne collecte aucune information les concernant.</p>
