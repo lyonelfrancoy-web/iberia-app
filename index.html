@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iberia — personal rental management app</title>
+<meta name="description" content="Iberia is a private, single-user application used by its developer to manage the seasonal rental of his own holiday home.">
+<style>
+  :root { --bg:#f6f5f1; --text:#1d2327; --muted:#5d6b73; --accent:#0e6b73; --card:#fff; --line:#dcd9d0; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14181b; --text:#e8ecee; --muted:#9fb0b8; --accent:#4fb8c2; --card:#1c2226; --line:#34404a; } }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.55 system-ui, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:32px 18px 60px; }
+  h1 { font-size:1.7rem; margin:0 0 .2rem; } h2 { font-size:1.2rem; margin:1.6rem 0 .4rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; margin-top:18px; }
+  .muted { color:var(--muted); } a { color:var(--accent); } li { margin:.3rem 0; }
+  hr { border:0; border-top:1px solid var(--line); margin:2rem 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Iberia</h1>
+  <p class="muted">Personal rental management app · Application personnelle de gestion de location saisonnière</p>
+
+  <section class="card" lang="en">
+    <h2>About this application</h2>
+    <p>Iberia is a <b>private, single-user application</b>. It runs on its developer's own computer and is used only by him to manage the seasonal rental of his own holiday home in Hossegor, France: seasonal pricing, bookings, payment tracking, and guest correspondence.</p>
+    <p>It is <b>not a public service</b>: it has no user accounts, no server operated by the developer, and no other users. It is not distributed to anyone.</p>
+
+    <h2>Why it asks for Google permissions</h2>
+    <ul>
+      <li><b>Gmail — send only</b> (<code>gmail.send</code>): to send booking-related emails to guests (contract, payment reminders, thank-you notes). Every message is shown to the developer and must be confirmed before it is sent. The application cannot read, list, modify or delete any email.</li>
+      <li><b>Google Sheets</b> (<code>spreadsheets</code>): to add or update rows in <b>one specific spreadsheet</b> — the arrivals list shared with the property's concierge service. Every change is previewed and must be confirmed before it is written. The application never reads or modifies any other spreadsheet.</li>
+    </ul>
+    <p>Details on how information is handled: <a href="privacy.html">Privacy policy</a>.</p>
+  </section>
+
+  <section class="card" lang="fr">
+    <h2>À propos de cette application</h2>
+    <p>Iberia est une <b>application privée à usage unique</b>. Elle fonctionne sur l'ordinateur de son développeur et n'est utilisée que par lui, pour gérer la location saisonnière de sa propre maison de vacances à Hossegor : tarifs, réservations, suivi des paiements et correspondance avec les locataires.</p>
+    <p>Ce n'est <b>pas un service public</b> : pas de comptes utilisateurs, pas de serveur exploité par le développeur, pas d'autres utilisateurs. Elle n'est distribuée à personne.</p>
+
+    <h2>Pourquoi elle demande des autorisations Google</h2>
+    <ul>
+      <li><b>Gmail — envoi uniquement</b> (<code>gmail.send</code>) : pour envoyer aux locataires des e-mails liés aux réservations (contrat, rappels de paiement, remerciements). Chaque message est présenté au développeur et doit être confirmé avant l'envoi. L'application ne peut ni lire, ni lister, ni modifier, ni supprimer aucun e-mail.</li>
+      <li><b>Google Sheets</b> (<code>spreadsheets</code>) : pour ajouter ou mettre à jour des lignes dans <b>une seule feuille</b> — la liste des arrivées partagée avec la conciergerie du bien. Chaque modification est prévisualisée et doit être confirmée avant d'être écrite. L'application ne lit ni ne modifie aucune autre feuille.</li>
+    </ul>
+    <p>Détails sur le traitement des informations : <a href="privacy.html#fr">Politique de confidentialité</a>.</p>
+  </section>
+
+  <hr>
+  <p class="muted"><small>Developer: Lyonel Françoy (GitHub: <a href="https://github.com/lyonelfrancoy-web">lyonelfrancoy-web</a>). Last updated: 16 November 2026.</small></p>
+</main>
+</body>
+</html>
